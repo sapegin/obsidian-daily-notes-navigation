@@ -27,6 +27,25 @@ export default class DailyNotesNavigationPlugin extends Plugin {
       name: 'Go to next daily note',
       callback: () => this.navigateToDailyNote(1),
     });
+
+    this.addCommand({
+      id: 'go-to-last-daily-note',
+      name: 'Go to last daily note',
+      callback: () => this.navigateToLastDailyNote(),
+    });
+  }
+
+  private navigateToLastDailyNote() {
+    const dailyNoteFiles = this.getDailyNotes();
+    if (dailyNoteFiles.length === 0) {
+      new Notice('No daily notes found');
+      return;
+    }
+
+    const targetFile = dailyNoteFiles.at(-1);
+    if (targetFile) {
+      void this.app.workspace.getLeaf().openFile(targetFile);
+    }
   }
 
   private getDailyNotesFolder(): string {

@@ -1,5 +1,7 @@
 # Daily Notes Navigation Obsidian plugin
 
+[Repository moved](https://github.com/sapegin/raccoon-obsidian/tree/main/plugins/daily-notes-navigation)
+
 [Obsidian](https://obsidian.md) plugin that provides commands to navigate to previous and next daily notes.
 
 [![Washing your code. A book on clean code for frontend developers](https://sapegin.me/images/washing-code-github.jpg)](https://sapegin.me/book/)
